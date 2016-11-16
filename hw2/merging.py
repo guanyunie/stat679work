@@ -50,9 +50,11 @@ def merging(f1, f2):
         waterTemperature.pop(0)
         waterTemperature.pop(0)
 
+        assert exists("output.csv"), "output.csv already exists. Delete it first if you want to continue."
+
         #write output to "output.csv"
         with open("output.csv",'w', newline='') as n:
             w = csv.writer(n)
-            w.writerow(["Plot Title: 10679014 jackson July29","","",""])
+            w.writerow(["Plot Title: 10679014 jackson July29"])
             w.writerow(["#","Date Time, GMT-05:00","K-Type, °F (LGR S/N: 10679014, SEN S/N: 10679014, LBL: water pipe)","energy"])
             w.writerows(waterTemperature)
