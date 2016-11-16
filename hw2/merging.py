@@ -47,14 +47,12 @@ def merging(f1, f2):
             waterTemperature[index[i] + 1].append(str(float(energyValue[i+1])/1000))
 
         #Formatting
-        waterTemperature[1][1] = ",".join([waterTemperature[1][1], waterTemperature[1][2]])
-        waterTemperature[1][2] = ",".join([waterTemperature[1][3], waterTemperature[1][4], waterTemperature[1][5], waterTemperature[1][6]])
-        waterTemperature[1][3] = "energy"
-        waterTemperature[1].pop()
-        waterTemperature[1].pop()
-        waterTemperature[1].pop()
+        waterTemperature.pop(0)
+        waterTemperature.pop(0)
 
         #write output to "output.csv"
         with open("output.csv",'w', newline='') as n:
             w = csv.writer(n)
+            w.writerow(["Plot Title: 10679014 jackson July29"])
+            w.writerow(["#","Date Time, GMT-05:00","K-Type, °F (LGR S/N: 10679014, SEN S/N: 10679014, LBL: water pipe)","energy"])
             w.writerows(waterTemperature)
