@@ -14,6 +14,11 @@ Directory
   - **output.csv**:  
     final output of merging data
 
+Assumption
+----------
+
+In this homework we are making an assumption that all times within one day are ordered.
+
 Useage
 ----------
 
