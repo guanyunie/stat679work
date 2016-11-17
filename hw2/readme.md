@@ -19,14 +19,24 @@ Assumption
 
 In this homework we are making an assumption that all times within one day are ordered.
 
-Useage
+Discreption
 ----------
 
-Can be called by command line:
-
+**compare_dates.py:**  
+Usage:  
+In a python session, call `compare_date.compare_date(arg1, arg2)`  
+Example:  
 ```shell
-IPython
 import compare_date
+compare_date.compare_date("2016-07-12", "2016-08-10")
+```
+note: yyyy-mm-dd format should be used.
+
+**merging.py:**  
+Usage:  
+In a python session, call `merging.merging(file1, file2)`  
+Example:  
+```shell
 import merging
 merging.merging("waterTemperature.csv","energy.csv")
 ```
