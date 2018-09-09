@@ -57,11 +57,11 @@ Directory
 Notes
 ----------------
 
-####0.
+#### 0.
 For detail description, please see the course website:
 http://cecileane.github.io/computingtools/pages/project1stepsinstructions
 
-####1.  
+#### 1.  
 When downloading quality_variant files, the following error appeared:
 
 ```shell
@@ -97,40 +97,40 @@ result:
 ```
 We don't know why "N13" shows up here, since two "N13"s are the same(and there are no extra spaces). When looking at "Utrecht" files on webpage, it says "Object not found." So we figured out that the file from the source is somehow damaged.
 
-####2.  
+#### 2.  
 In step 3, we first seperate the `quality variant` data by chromosomes. The seperated data files have the file names of `patient_chromosome.txt`, for example, `Aa_0_chr1.txt`. This pre step makes our step 3 much faster when we have to read latter lines of `quality variant` files. However, due to the large size of the data file, we did not upload here. After executing
 ```shell
 bash step_pre_3.sh
 ```
 there will be a new directory named `QV_S` under `data/` and we use data from `QV_S` in step3.
 
-####3.
+#### 3.
 We didn't use SNP data downloaded directly, instead, we separate quality_variant files by chromosomes. For example, quality_variant_Aa_0.txt file is separated to 7files, Aa_0_chr1.txt, Aa_0_chr2.txt, Aa_0_chr3.txt, Aa_0_chr4.txt, Aa_0_chr5.txt, Aa_0_chrC.txt and Aa_0_chrM.txt.
 
 [step_pre_3.sh](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step_pre_3.sh) will do that step.
 
-####4.
+#### 4.
 The step 6 is not in the script, in fact we run step 6 directly under the guidance of project instruction.
 
-####5.
+#### 5.
 Some examples are shown in [report.md](https://github.com/guanyunie/stat679work/blob/master/final_project/result/report.md)
 
 
 Usage
 -------------
-###step1
+### step1
 Get the SNP data:
 ```shell
 bash script/step1.sh
 ```
 
-###step2
+### step2
 Get the reference genome:
 ```shell
 bash script/step2.sh
 ```
 
-###step3
+### step3
 Build individual genomes:
 First seperate quality variant files by chromosomes:
 ```shell
@@ -148,7 +148,7 @@ Three parameters:
 - startposition: starting base position (e.g. 1,2,…,20000,…), with indexing starting at 1 because “position” indices start at 1 in the SNP data files
 - length: alignment length (e.g. 1000), in base pairs
 
-###step_4_to_5
+### step_4_to_5
 Build non-overlapping blocks and get a tree for each block:
 ```shell
 bash script/step_4_to_5.sh chromosome startingblockindex numblocks
@@ -159,14 +159,14 @@ Three parameters:
 - numblocks: number of blocks to produce (e.g. 1,2,…)
 
 
-###step6
+### step6
 Calculate Robinson-Foulds distances between trees:
 ```shell
 raxmlHPC-PTHREADS-AVX -f r -z chr{*}.tre -n chr{*}dist -m GTRCAT --HKY85 -T 2
 ```
 where {*}=2,C and M
 
-###step7
+### step7
 Open `script/step7.R` in Rstudio and run codes.
 
 |Step   |time cost     |where        |
