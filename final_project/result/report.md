@@ -86,11 +86,11 @@ We choose R language and the script is in [step7.R](https://github.com/guanyunie
 In each of plots, we made the density function for two comparable functions respectively and plotted the mean value.
 #### For chromosome 2,  
 (a)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chr2a.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chr2a.jpeg)
 
 The observed tree distances are closer to 0 than expected if the 2 trees were chosen at random uniformly.  
 (b)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chr2b.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chr2b.jpeg)
 
 Trees from 2 consecutive blocks tend to be more similar to each other than trees from 2 randomly chosen blocks.   
 
