@@ -1,16 +1,16 @@
-#Report
-##Step 1
-Under the directory [project1-team5](https://github.com/UWMadison-computingtools/project1-team5), execute `bash script/step1.sh` to get 216 SNP files and store them into a directory `./data/QV`. At the same time, we get [qvfiles.csv](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/qvfiles.csv) file to store the data result, which include the total number of SNP files, SNP file name and the SNP file size.
+# Report
+## Step 1
+Under the directory [project1-team5](https://github.com/guanyunie/stat679work/tree/master/final_project), execute `bash script/step1.sh` to get 216 SNP files and store them into a directory `./data/QV`. At the same time, we get [qvfiles.csv](https://github.com/guanyunie/stat679work/blob/master/final_project/result/qvfiles.csv) file to store the data result, which include the total number of SNP files, SNP file name and the SNP file size.
 
-There is another script [./script/step1_comprehensive.sh](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step1_comprehensive.sh). It is not used in following steps. However, by executing `bash script/step1_comprehensive.sh`, we can get more comprehensive SNP data files. It would contain all files in <http://signal.salk.edu/atg1001/data/Salk/> and <http://signal.salk.edu/atg1001/download.php>, and delete duplicate files automatically.
+There is another script [./script/step1_comprehensive.sh](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step1_comprehensive.sh). It is not used in following steps. However, by executing `bash script/step1_comprehensive.sh`, we can get more comprehensive SNP data files. It would contain all files in <http://signal.salk.edu/atg1001/data/Salk/> and <http://signal.salk.edu/atg1001/download.php>, and delete duplicate files automatically.
 
 
-##Step2
+## Step2
 This step is to get the 7 chromosome data files, and choose the 3 smallest chromosomes.(except chromosome 4)
-By executing `bash script/step2.sh`, we can get 7 chromosome files, and store them in directory `./data/At`. At the same time, we can get [three_smallest_chro.csv](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/three_smallest_chro.csv). The three smallest chromosome files are chromosomeC, chromosomeM and chromosome2, with file size 156517, 371653 and 19947711 respectively
+By executing `bash script/step2.sh`, we can get 7 chromosome files, and store them in directory `./data/At`. At the same time, we can get [three_smallest_chro.csv](https://github.com/guanyunie/stat679work/blob/master/final_project/result/three_smallest_chro.csv). The three smallest chromosome files are chromosomeC, chromosomeM and chromosome2, with file size 156517, 371653 and 19947711 respectively
 
 
-##Step3
+## Step3
 This step is to get an alignment of the DNA sequences of all strains for a chromosome of interest and for a genomic range of interest. We use `python script/step3.py chromosome startingposition length` to execute. The three arguments:
 
 - chromosome (in 1-5, C or M)
@@ -39,7 +39,7 @@ bash step_pre_3.sh
 ```
 Then use grep to search only the lines with interested chromosome. Results turns out that this makes step3 much faster. Spliting the file takes about 8 hours. If the input parameters are `"1" 1 10000`, the first algorithm we used take about 3 minutes to get the output file, while the second one takes only several seconds.
 
-##Step 4 to 5
+## Step 4 to 5
 This step is to cut a chromosome into non-overlapping alignments —or blocks— of length 10,000 base pairs (except for the last one) by calling step 3 in a for loop. It also contains step5, run RAxML and retain the main output file for each block from a given chromosome, starting at some block and for some number of blocks. One should use:
 ```shell
 bash step_4_to_5.sh chromosome startingblockindex numblocks
@@ -56,7 +56,7 @@ The three arguments:
 
 - numblocks, number of blocks to produce (e.g. 1,2,…)
 
-##Step6
+## Step6
 Calculate the [Robinson-Foulds](https://en.wikipedia.org/wiki/Robinson–Foulds_metric)(RF) distance between pairs of (unrooted) trees.
 
 ```shell
@@ -71,20 +71,20 @@ The result should be like, for example:
     1 2: 390 0.915493
 
 
-##Step7
+## Step7
 This step is to test tree similarity. For each of chromosomeC, chromosomeM and chromosome2, we need to answer two question:
 
 - (a): Are the observed tree distances closer to 0 than expected if the 2 trees were chosen at random uniformly?
 
 - (b): Do trees from 2 consecutive blocks tend to be more similar to each other (at smaller distance) than trees from 2 randomly chosen blocks from the same chromosome?
 
-We choose R language and the script is in [step7.R](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step7.R). The result is in [step7_plot.pdf](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/step7_plot.pdf).
+We choose R language and the script is in [step7.R](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step7.R). The result is in [step7_plot.pdf](https://github.com/guanyunie/stat679work/blob/master/final_project/result/step7_plot.pdf).
 
 
-##Conclusion
+## Conclusion
 
 In each of plots, we made the density function for two comparable functions respectively and plotted the mean value.
-####For chromosome 2,  
+#### For chromosome 2,  
 (a)  
 ![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chr2a.jpeg)
 
@@ -94,23 +94,23 @@ The observed tree distances are closer to 0 than expected if the 2 trees were ch
 
 Trees from 2 consecutive blocks tend to be more similar to each other than trees from 2 randomly chosen blocks.   
 
-####For chromosome C,
+#### For chromosome C,
 (a)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chrCa.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chrCa.jpeg)
 
 The observed tree distances are closer to 0 than expected if the 2 trees were chosen at random uniformly.  
 (b)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chrCb.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chrCb.jpeg)
 
 Trees from 2 consecutive blocks tend to be more similar to each other than trees from 2 randomly chosen blocks, but the trend is much less than that of chr2.  
 
-####For chromosome M,
+#### For chromosome M,
 (a)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chrMa.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chrMa.jpeg)
 
 The observed tree distances closer to 0 than expected if the 2 trees were chosen at random uniformly, but the trend is much less than that of chr2.  
 (b)  
-![alt text](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/chrMb.jpeg)
+![alt text](https://github.com/guanyunie/stat679work/blob/master/final_project/result/chrMb.jpeg)
 
 Trees from 2 consecutive blocks tend to be more similar to each other than trees from 2 randomly chosen blocks, but the trend is much less than that of chr2.
 
