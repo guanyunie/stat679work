@@ -6,52 +6,52 @@ Directory
 
 - project1-team5/
   - script/
-    - [**step1.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step1.sh):
+    - [**step1.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step1.sh):
       Downloading all “quality_variant” files for all strains listed.
-    - [**step1_comprehensive.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step1_comprehensive.sh):
+    - [**step1_comprehensive.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step1_comprehensive.sh):
       Downloading more comprehensive SNP data files than step1.sh. However, it's not used in following steps.
-    - [**step2.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step2.sh):
+    - [**step2.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step2.sh):
       Downloading all Arabidopsis thaliana reference genome.
-    - [**step_pre_3.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step_pre_3.sh):
+    - [**step_pre_3.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step_pre_3.sh):
       Seperate each quality variant file into 7 files by chromosomes.
-    - [**step3.py**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step3.py):
+    - [**step3.py**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step3.py):
       Python script, which is faster than shell. Returns an alignment of the DNA sequences of all strains for a chromosome of interest and for a genomic range of interest.
-    - [**step3.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step3.sh):
+    - [**step3.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step3.sh):
       Shell script, the same function as step3.py. Returns an alignment of the DNA sequences of all strains for a chromosome of interest and for a genomic range of interest.
-    - [**step_4_to_5.sh**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step_4_to_5.sh):
+    - [**step_4_to_5.sh**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step_4_to_5.sh):
       Cut a chromosome into non-overlapping alignments of length 10000 base pairs(except for the last one).
-    - [**step7.R**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/script/step7.R):
+    - [**step7.R**](https://github.com/guanyunie/stat679work/blob/master/final_project/script/step7.R):
     This step is to test tree similarity. For each of chromosomeC, chromosomeM and chromosome2, our goal is to find:
     (a)The observed tree distances are closer to 0 than expected if the 2 trees were chosen at random uniformly?
     (b)Trees from 2 consecutive blocks tend to be more similar to each other (at smaller distance) than trees from 2 randomly chosen blocks from the same chromosome
   - result/  
     There are two directories, one is called result, the other one is called trees. Both two represent results we got, but different contents.
-    - [**report.md**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/report.md):
+    - [**report.md**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/report.md):
     Summary of our results.
-    - [**qvfiles.csv**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/qvfiles.csv):
+    - [**qvfiles.csv**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/qvfiles.csv):
     It contains the information of files we got in step1. Three columns exist, one is the total file number, one is filenames for each SNP data file, the last one represents file size.
-    - [**three_smallest_chro.csv**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/three_smallest_chro.csv):
+    - [**three_smallest_chro.csv**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/three_smallest_chro.csv):
       3 smallest chromosomes we analysed and got from step2. They are actually chromosome2, chromosomeC and chromosomeM. The first column represents chromosome name, the second one represents file size.
-    - [**step7_plot.pdf**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/step7_plot.pdf):
+    - [**step7_plot.pdf**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/step7_plot.pdf):
     It contains six plots made in step7 to analyze and answer question(a) and question(b) in step7.
-    - [**readme.md**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/readme.md) under the directory result also explain these.
+    - [**readme.md**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/readme.md) under the directory result also explain these.
   - trees/
-    - [**chr2.tre**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/chr2.tre):
+    - [**chr2.tre**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/chr2.tre):
     Trees got from chromosome2.
-    - [**chrC.tre**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/chrC.tre):
+    - [**chrC.tre**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/chrC.tre):
     Trees got from chromosomeC.
-    - [**chrM.tre**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/chrM.tre):
+    - [**chrM.tre**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/chrM.tre):
     Trees got from chromosomeM.
-    - [**RAxML_RF-Distances.chr2dist**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/RAxML_RF-Distances.chr2dist):
+    - [**RAxML_RF-Distances.chr2dist**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/RAxML_RF-Distances.chr2dist):
     distance between trees in chromosome2.
-    - [**RAxML_RF-Distances.chrCdist**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/RAxML_RF-Distances.chrCdist):
+    - [**RAxML_RF-Distances.chrCdist**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/RAxML_RF-Distances.chrCdist):
     distance between trees in chromosomeC.
-    - [**RAxML_RF-Distances.chrMdist**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/trees/RAxML_RF-Distances.chrMdist):
+    - [**RAxML_RF-Distances.chrMdist**](https://github.com/guanyunie/stat679work/blob/master/final_project/trees/RAxML_RF-Distances.chrMdist):
     distance between trees in chromosomeM.
   - debug
-    - [**filenames.txt**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/debug/filenames.txt):
+    - [**filenames.txt**](https://github.com/guanyunie/stat679work/blob/master/final_project/debug/filenames.txt):
       Debugging file, all downloaded quality variant files.
-    - [**strains.txt**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/debug/strains.txt):
+    - [**strains.txt**](https://github.com/guanyunie/stat679work/blob/master/final_project/debug/strains.txt):
       Debugging file, all quality variant files online.
 
 Notes
@@ -113,7 +113,7 @@ We didn't use SNP data downloaded directly, instead, we separate quality_variant
 The step 6 is not in the script, in fact we run step 6 directly under the guidance of project instruction.
 
 ####5.
-Some examples are shown in [report.md](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/report.md)
+Some examples are shown in [report.md](https://github.com/guanyunie/stat679work/blob/master/final_project/result/report.md)
 
 
 Usage
@@ -174,10 +174,10 @@ Open `script/step7.R` in Rstudio and run codes.
 |step1  |5 hours|QV directory(not here)    |
 |step2  |15 mins|  At directory(not here)|
 |step3_pre  |5 hours|             QV_S directory(not here)|
-|step4-5|17 hours |      [trees](https://github.com/UWMadison-computingtools/project1-team5/tree/master/trees)           |
-|step6  |3 seconds |         [trees](https://github.com/UWMadison-computingtools/project1-team5/tree/master/trees)       |
-|step7  |  1 seconds    |     [step7_plot](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/step7_plot.pdf)       |
+|step4-5|17 hours |      [trees](https://github.com/guanyunie/stat679work/tree/master/final_project/trees)           |
+|step6  |3 seconds |         [trees](https://github.com/guanyunie/stat679work/tree/master/final_project/trees)       |
+|step7  |  1 seconds    |     [step7_plot](https://github.com/guanyunie/stat679work/blob/master/final_project/result/step7_plot.pdf)       |
 
 Link
 -------------
-[**report.md**](https://github.com/UWMadison-computingtools/project1-team5/blob/master/result/report.md)
+[**report.md**](https://github.com/guanyunie/stat679work/blob/master/final_project/result/report.md)
